@@ -3,7 +3,7 @@ version: "3.9"
 services:
   calculator:
     container_name: calculator-app
-    build: .
+    image: pial847/calculator-app:1.0.0
     ports:
       - "5000:5000"
     networks:
