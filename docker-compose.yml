@@ -3,9 +3,11 @@ version: "3.9"
 services:
   calculator:
     container_name: calculator-app
-    image: pial847/calculator-app:1.0.0
+    image: pial847/calculator-app:latest
     ports:
       - "5000:5000"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
     networks:
       - calculator-net
 

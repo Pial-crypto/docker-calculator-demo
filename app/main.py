@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def health():
-    return "Calculator API is running"
+    return "AUTO DEPLOY WORKING 🚀"
+
 
 @app.route("/add")
 def add():
