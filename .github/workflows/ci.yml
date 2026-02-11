@@ -23,3 +23,12 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/calculator-app:latest
+      - name: Setup kubectl
+        uses: azure/setup-kubectl@v3
+
+      - name: Update Kubernetes Deployment
+        run: |
+          kubectl set image deployment/calculator-app calculator-app=${{ secrets.DOCKERHUB_USERNAME }}/calculator-app:latest
+          kubectl rollout status deployment/calculator-app
+    
+
