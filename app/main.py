@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def health():
-    return "AUTO DEPLOY WORKING 🚀"
+    return "Version updated 🚀"
+
 
 
 @app.route("/add")
